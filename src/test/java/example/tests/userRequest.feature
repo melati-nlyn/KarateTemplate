@@ -34,17 +34,17 @@ Feature: User API Tests
     Then print response
     And status 200
 
+  Scenario: Logs out current logged in user session
+    When url "https://petstore.swagger.io/v2/user/logout"
+    When method get
+    Then print response
+    And status 200
+
   Scenario: Delete User
     * def reqHeader = { 'Username': 'HarvelG' }
     When url "https://petstore.swagger.io/v2/user/HarvelG"
     And headers reqHeader
     And method delete
-    Then print response
-    And status 200
-
-  Scenario: Logs out current logged in user session
-    When url "https://petstore.swagger.io/v2/user/logout"
-    When method get
     Then print response
     And status 200
 
