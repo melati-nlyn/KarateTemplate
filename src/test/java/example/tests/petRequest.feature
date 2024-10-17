@@ -39,3 +39,4 @@ Feature: Pet API Tests
     And method delete
     Then print response
     And status 200
+
